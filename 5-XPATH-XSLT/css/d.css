@@ -1,0 +1,21 @@
+body,html{margin:0px}
+body{width:70%;padding-left:15%;padding-right:15%}
+#presentacion{background-color:#DEE8E8;font-family:Verdana;font-size:1em;color:royalblue;width:100%;height:auto;margin-top:3%;
+               margin-bottom: 3%;margin-left:0%; padding:10px 20px;	border:1px solid royalblue;border-radius:15px;}
+#uniLogo{background-color: floralwhite; width:90%;padding-left:5%;padding-right:5%; }
+.uniIcon{width:100%;}
+body,input,select,label{font-size:2vw}
+h3{font-size:2vw; color: royalblue}
+h2{background-color: lightgray; text-align: center;border-radius: 5px}
+h4{margin-left:30%;background-color: lightgray; text-align: center;border-radius: 5px}
+#h3Index{width:70%;padding-left:5%;padding-right:5%;}
+input,select{width:50%}
+input[type=checkbox]{width:5%;zoom:1.5}
+input[type=radio]{width:5%;zoom:1.5}
+form{background-color:#DEE8E8 ;padding:3%;border-radius: 15px;margin-bottom: 2%}
+#pregunta{font-family:Verdana;font-size:1vm;width:auto;margin:1px 1px;padding:1px 10px;height:auto}
+input[type="submit"]{margin-left:25%}
+#resultadosDiv{display: none;background-color:#DEE8E8;font-family:Verdana;font-size:1em;color:royalblue;width:50%;height:auto;margin-top:3%;
+               margin-bottom: 3%;margin-left:25%; padding:10px 20px;	border:1px solid royalblue;border-radius:15px;}
+#examen{margin-left:40%; }
+button{color:rebeccapurple ; font-size: 2em;text-size: 50px}

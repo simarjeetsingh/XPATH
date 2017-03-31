@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Universitat Francesc de Borja Moll</title>
+    <meta charset="utf-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' media='screen and (min-width: 811px)' href='css/d.css'>
+    <link rel='stylesheet' media='screen and (max-width: 810px)' href='css/m.css'>
+    <script src='js/questions.js'></script>
+</head>
+<body>
+    <div id ="uniLogo">
+        <img class="uniIcon" src="img/uni.png">      
+    </div>
+    <div id ="h2"> <h2> Examen de Programación<h2></div>
+    
+ <form id='myform'>
+    <div id ="pregunta"> 
+        <h3 id='tituloRadio1'></h3>
+        <div id = 'radioDiv1'></div> 
+        <br>
+    </div>
+    <div id ="pregunta"> 
+        <h3 id='tituloRadio2'></h3>
+        <div id = 'radioDiv2'></div> 
+        <br>
+    </div>
+    <div id ="pregunta"> 
+        <h3 id='tituloCheckbox1'></h3>
+        <div id='checkboxDiv1'></div>
+        <br>
+    </div>   
+    <div id ="pregunta"> 
+        <h3 id='tituloCheckbox2'></h3>
+        <div id='checkboxDiv2'></div>
+        <br>
+    </div>
+    <div id ="pregunta"> 
+        <h3 id='tituloInput1'></h3>
+        <input id="num1" type='number'>
+        <br><br>
+    </div>
+    <div id ="pregunta"> 
+        <h3 id ="tituloInput2"></h3>
+        <input id = "num2" type="number">
+        <br><br>
+    </div>
+    <div id ="pregunta"> 
+        <h3 id='tituloSelect1'></h3>
+        <select id='sel1'>
+        <option selected value="-1">Selecciona una...</option>
+        </select>
+        <br><br>
+    </div>
+    <div id ="pregunta"> 
+        <h3 id='tituloSelect2'></h3>
+        <select id='sel2'>
+        <option selected value="-1">Selecciona una...</option>
+        </select>
+        <br><br>
+    </div>
+    <div id ="pregunta"> 
+        <h3 id='selectMultiple1'></h3>
+        <select id='selM1' multiple>  
+        </select>
+        <br><br>
+    </div>
+    <div id ="pregunta"> 
+        <h3 id='selectMultiple2'></h3>
+        <select id='selM2' multiple>  
+        </select>
+        <br><br>
+    </div>
+    <input type='submit' value='Corregir'>
+  </form>
+   <div id='resultadosDiv'></div> 
+ </body>
+</html>

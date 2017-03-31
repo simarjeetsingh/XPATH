@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="questions.xsl"?>
+
+<!--<questions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="questions.xsd" > -->
+<questions>
+	<question id="jdos_001">
+
+		<type>radio</type>
+
+		<title>1. ¿Cuál de las siguientes opciones no es un lenguaje de programación? </title>
+
+		<options>Java</options>
+
+		<options>JavaScript</options>
+
+		<options>Oak</options>
+
+		<options>HTML</options>
+
+		<answer>3</answer>
+
+	</question>
+
+	<question id="jdos_002">
+
+		<type>radio</type>
+
+		<title>2. ¿A partir de qué lenguaje fue creado C? </title>
+
+		<options>B</options>
+
+		<options>C#</options>
+
+		<options>Pascal</options>
+
+		<options>Oak</options>
+
+		<answer>0</answer>
+
+	</question>
+	
+	<question id="jdos_003">
+
+		<type>checkbox</type>
+
+		<title>3. ¿A partir de qué lenguajes fue creado Java? </title>
+
+		<options>C++</options>
+
+		<options>GO</options>
+
+		<options>Pascal</options>
+
+		<options>SmallTalk</options>
+
+		<answer>0</answer>
+
+		<answer>3</answer>
+
+	</question>
+
+	<question id="jdos_004">
+
+		<type>checkbox</type>
+
+		<title>4. ¿Cuáles de estos lenguajes de programación están orientados al paradigma orientada a objetos?  </title>
+
+		<options>Ada</options>
+
+		<options>C#</options>
+
+		<options>Python</options>
+
+		<options>Ruby</options>
+		
+		<answer>0</answer>
+
+		<answer>1</answer>
+
+		<answer>2</answer>
+
+		<answer>3</answer>
+
+
+	</question>
+
+	<question id="jdos_005">
+
+		<type>text</type>
+
+		<title>5. ¿En qué año surgió el primer lenguaje de alto nivel? </title>
+
+		<answer>1954</answer>
+
+	</question>
+
+	<question id="jdos_006">
+
+		<type>text</type>
+
+		<title>6. ¿En qué año apareció por primera vez Java? </title>
+
+		<answer>1995</answer>
+
+	</question>
+	
+	<question id="jdos_007">
+
+		<type>select</type>
+
+		<title>7. ¿Qué lenguaje de programación es considerado de nivel intermedio?</title>
+
+		<options>Java</options>
+
+		<options>JavaScript</options>
+
+		<options>Oak</options>
+
+		<options>C</options>
+
+		<answer>3</answer>
+
+	</question>	
+
+	<question id="jdos_008">
+
+		<type>select</type>
+
+		<title>8. ¿Cuál es el objetivo de la TDD?</title>
+
+		<options>Mantener el código bajo control.</options>
+
+		<options>Programar sin el uso de test.</options>
+
+		<options>Reducir las horas de trabajo.</options>
+
+		<options>Hacerte rico impartiendo cursos de TDD.</options>
+
+		<answer>0</answer>	
+
+	</question>
+
+	<question id="jdos_009">
+
+		<type>multiple</type>
+
+		<title>9. ¿Cuáles de las siguientes estructuras de datos en Python son inmutables? </title>
+
+		<options>Listas</options>
+
+		<options>String</options>
+
+		<options>Tuplas</options>
+
+		<options>Diccionarios</options>
+
+		<answer>1</answer>
+
+		<answer>2</answer>
+
+	</question>
+	
+	<question id="jdos_010">
+
+		<type>multiple</type>
+
+		<title>10. ¿Cuáles de estos lenguajes de programación están orientados al paradigma funcional? </title>
+
+		<options>Java</options>
+
+		<options>Haskell</options>
+
+		<options>C#+</options>
+
+		<options>Scala</options>
+
+		<answer>1</answer>
+
+		<answer>3</answer>
+
+	</question>
+
+</questions>

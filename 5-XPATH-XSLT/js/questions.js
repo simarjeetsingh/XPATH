@@ -21,7 +21,7 @@ window.onload = function(){
  formElement=document.getElementById('myform');
  formElement.onsubmit=function(){
    inicializar();
-   //if (comprobar()){      
+   if (comprobar()){      
       corregirRadio1();
       corregirRadio2();
       corregirCheckbox1(); 
@@ -33,7 +33,7 @@ window.onload = function(){
       corregirSelectMultiple1();
       corregirSelectMultiple2();
       presentarNota();
-  // }
+   }
   return false;
  }
  

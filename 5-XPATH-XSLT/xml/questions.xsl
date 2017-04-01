@@ -32,9 +32,9 @@
          </xsl:when>
         </xsl:choose>         
        </xsl:for-each>
-       <xsl:for-each select="option">
+       <xsl:for-each select="options">
          <xsl:variable name="optposition" select="position()-1"/>
-        O<xsl:value-of select="$optposition+1"/>: <xsl:value-of select="text()"/>
+        Op.<xsl:value-of select="$optposition+1"/>: <xsl:value-of select="text()"/>
          <xsl:for-each select="../answer">
           <xsl:variable name="correctanswer" select="text()"/>
           <xsl:if test="$optposition=$correctanswer">
@@ -54,11 +54,17 @@
             <xsl:if test="$useranswer=$correctanswertext">
               <span>&#x2713;</span>
             </xsl:if>
+            <xsl:if test="not($useranswer=$correctanswertext)">
+              <span id="x">&#x2715;</span>
+            </xsl:if>         
            </xsl:when>
            <xsl:otherwise>
             <xsl:variable name="correctanswer" select="text()+1"/>
            <xsl:if test="$useranswer=$correctanswer">
               <span>&#x2713;</span>
+            </xsl:if>
+            <xsl:if test="not($useranswer=$correctanswer)">
+              <span id="x">&#x2715;</span>
             </xsl:if>
            </xsl:otherwise>
           </xsl:choose>

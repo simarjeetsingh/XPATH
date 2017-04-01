@@ -12,5 +12,4 @@ input[type=radio]{width:5%;zoom:1.5}
 form{background-color: #DEE8E8  ;padding:1%;border-radius: 15px;margin-bottom: 2%}
 #pregunta{font-family:Verdana;font-size:1vm;width:auto;height:auto;margin:1px 1px;padding:1px 10px;}
 input[type="submit"]{margin-left:10%}
-#resultadosDiv{display: none;background-color:#DEE8E8;font-family:Verdana;font-size:1em;color:royalblue;width:85%;height:auto;margin-top:2%;margin-bottom:2%;
-               margin-left:2%; padding:10px 20px;	border:1px solid royalblue;border-radius:15px;}
+#resultadosDiv{top:0px;background-color:white;width:inherit;padding:2%;margin-right:2%;display:none}               

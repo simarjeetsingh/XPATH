@@ -45,7 +45,7 @@ window.onload = function(){
   }
  };
  xhttp.open("GET", "xml/questions.xml", true);
- //xhttp.open("GET", "https://rawgit.com/simarjeetsingh/LLM/master/PreguntasXML/Validaci%C3%B3n%20XML%20con%20XSD/questions.xml", true);
+ //xhttp.open("GET", "https://rawgit.com/simarjeetsingh/XPATH/master/5-XPATH-XSLT/xml/questions.xml", true);
  xhttp.send();
 
  //LEER XSL de xml/questions.xml
@@ -56,6 +56,7 @@ window.onload = function(){
   }
  };
  xhttp2.open("GET", "xml/questions.xsl", true);
+ //xhttp2.open("GET", "https://rawgit.com/simarjeetsingh/XPATH/master/5-XPATH-XSLT/xml/questions.xsl", true);
  xhttp2.send();
  
 }
@@ -182,17 +183,20 @@ function corregirRadio1(){
   var notaRad1 = 0;
   for (i = 0; i < f.colorR1.length; i++) { //"colorR1" es el nombre asignado a todos los RadioButtons
     if (f.colorR1[i].checked) {
+      var useranswer = xmlDoc.createElement("useranswer");   
+      useranswer.innerHTML = i+1;
+      xmlDoc.getElementById("jdos_001").appendChild(useranswer);
       escorrecta =false;        
      if (i==respuestasRadio1) escorrecta=true;
     }
   }   
     if (escorrecta) {
      notaRad1 +=1.0;   
-     darRespuestaHtml("P1: Correcta");
+    // darRespuestaHtml("P1: Correcta");
      nota +=1.0;    
     } else {
      nota -=1.0;    
-     darRespuestaHtml("P1: Incorrecta");     
+    // darRespuestaHtml("P1: Incorrecta");     
   }
 }
 
@@ -202,17 +206,20 @@ function corregirRadio2(){
   var notaRad2 = 0;
   for (i = 0; i < f.colorR2.length; i++) { //"colorR2" es el nombre asignado a todos los RadioButtons
     if (f.colorR2[i].checked) {
+      var useranswer = xmlDoc.createElement("useranswer");   
+      useranswer.innerHTML = i+1;
+      xmlDoc.getElementById("jdos_002").appendChild(useranswer);
       escorrecta =false;         
      if (i==respuestasRadio2) escorrecta=true;
     }
   }   
     if (escorrecta) {
      notaRad2 +=1.0;   
-     darRespuestaHtml("P2: Correcta");
+    // darRespuestaHtml("P2: Correcta");
      nota +=1.0;    
     } else {
      nota -=1.0;    
-     darRespuestaHtml("P2: Incorrecta");     
+    // darRespuestaHtml("P2: Incorrecta");     
   }
 }
 // Corregir checkbox ----------------------------
@@ -239,12 +246,7 @@ function corregirCheckbox1(){
      nota -=1.0/respuestasCheckbox1.length;  //dividido por el número de respuestas correctas   
     }
     } 
-  }
-   /* if (notaCheckbox1 != 1 & notaCheckbox1 !=0){
-      darRespuestaHtml("P3: Semicorrecta"); 
-    }else  if(notaCheckbox1 == 0){
-      darRespuestaHtml("P3: Incorrecta")
-    }else   darRespuestaHtml("P3: Correcta");   */    
+  }   
 }
 
 function corregirCheckbox2(){
@@ -291,13 +293,13 @@ function corregirNumber1(){
   //var s = formElement.elements[4].value;  
   var s=document.getElementById("num1").value;     
     if (s==numeroSecreto1) {
-      darRespuestaHtml("P5: Correcta");
+      //darRespuestaHtml("P5: Correcta");
       nota +=1;
     }
-    else {
+    /*else {
       if (s>numeroSecreto1) darRespuestaHtml("P5: Te has pasado");
       else darRespuestaHtml("P5: Te has quedado corto");
-    }
+    }*/
     var useranswer = xmlDoc.createElement("useranswer");   
     useranswer.innerHTML = s;
     xmlDoc.getElementById("jdos_005").appendChild(useranswer);
@@ -307,13 +309,13 @@ function corregirNumber2(){
   //var s = formElement.elements[5].value;    
   var s = document.getElementById("num2").value;
     if (s==numeroSecreto2) {
-    darRespuestaHtml("P6: Correcta");
+    //darRespuestaHtml("P6: Correcta");
     nota +=1;
     }
-    else {
+   /* else {
       if (s>numeroSecreto2) darRespuestaHtml("P6: Te has pasado");
       else darRespuestaHtml("P6: Te has quedado corto");
-    }
+    }*/
     var useranswer = xmlDoc.createElement("useranswer");   
     useranswer.innerHTML = s;
     xmlDoc.getElementById("jdos_006").appendChild(useranswer);
@@ -327,9 +329,9 @@ function corregirSelect1(){
     nota +=1;
     }
    // else darRespuestaHtml("P7: Incorrecta");
-    /*var useranswer = xmlDoc.createElement("useranswer");   
-  useranswer.innerHTML = sel.selectedIndex;
-  xmlDoc.getElementById("profe_007").appendChild(useranswer);*/
+    var useranswer = xmlDoc.createElement("useranswer");   
+    useranswer.innerHTML = sel.selectedIndex;
+    xmlDoc.getElementById("jdos_007").appendChild(useranswer);
 }
 function corregirSelect2(){
   //var sel = formElement.elements[6]; 
@@ -339,9 +341,9 @@ function corregirSelect2(){
     nota +=1;
     }
    // else darRespuestaHtml("P8: Incorrecta");
-    /*var useranswer = xmlDoc.createElement("useranswer");   
-  useranswer.innerHTML = sel.selectedIndex;
-  xmlDoc.getElementById("profe_008").appendChild(useranswer);*/
+  var useranswer = xmlDoc.createElement("useranswer");   
+   useranswer.innerHTML = sel.selectedIndex;
+   xmlDoc.getElementById("jdos_008").appendChild(useranswer);
 }
 // Corregir Select multiple  
 
@@ -352,6 +354,9 @@ function corregirSelectMultiple1(){
 	var puntuacion = 0;
 	for (var i = 0; i<multiple.length; i ++){
 		if (multiple[i].selected){
+      var useranswer = xmlDoc.createElement("useranswer");
+      useranswer.innerHTML = i+1;
+      xmlDoc.getElementById("jdos_009").appendChild(useranswer);
 			for (var j = 0; j<respuestasMultiple1.length; j++){
 				if (i == respuestasMultiple1[j]){
 					escorrecta.push(multiple[i].value);
@@ -363,11 +368,6 @@ function corregirSelectMultiple1(){
 		puntuacion = escorrecta.length / respuestasMultiple1.length;
 		nota += puntuacion;
 	}
-	if (puntuacion != 1 & puntuacion != 0){
-		darRespuestaHtml("P9: Semicorrecta")
-	} else if (puntuacion == 0){
-		darRespuestaHtml("P9: Incorrecta");
-	}else darRespuestaHtml("P9: Correcta")
 }
 
 function corregirSelectMultiple2(){
@@ -377,6 +377,9 @@ function corregirSelectMultiple2(){
 	var puntuacion = 0;
 	for (var i = 0; i<multiple.length; i ++){
 		if (multiple[i].selected){
+      var useranswer = xmlDoc.createElement("useranswer");
+      useranswer.innerHTML = i+1;
+      xmlDoc.getElementById("jdos_010").appendChild(useranswer);
 			for (var j = 0; j<respuestasMultiple2.length; j++){
 				if (i == respuestasMultiple2[j]){
 					escorrecta.push(multiple[i].value);
@@ -388,11 +391,6 @@ function corregirSelectMultiple2(){
 		puntuacion = escorrecta.length / respuestasMultiple2.length;
 		nota += puntuacion;
 	}
-	if (puntuacion != 1 & puntuacion != 0){
-		darRespuestaHtml("P10: Semicorrecta")
-	} else if (puntuacion == 0){
-		darRespuestaHtml("P10: Incorrecta");
-	}else darRespuestaHtml("P10: Correcta")
 }
 
 //****************************************************************************************************
@@ -557,10 +555,12 @@ function darRespuestaHtml(r){
  var node = document.createTextNode(r);
  p.appendChild(node);
  document.getElementById('resultadosDiv').appendChild(p);
- //document.getElementById('resultadosDiv').style.display = "block";
+ 
 }
 function presentarNota(){   
    document.getElementById('resultadosDiv').style.display = "block";
+   document.getElementById('myform').style.display = "none";
+   document.getElementById('h2').focus();
    //Código transformación xslt con xmlDoc y xslDoc
    if (document.implementation && document.implementation.createDocument) {
         xsltProcessor = new XSLTProcessor();
@@ -576,10 +576,6 @@ function presentarNota(){
     e[i].disabled = true;
    }
 }
-
-/*function presentarNota(){
-   darRespuestaHtml("Nota: "+nota+" puntos sobre 10");
-}*/
 
 function inicializar(){
    document.getElementById('resultadosDiv').innerHTML = "";
